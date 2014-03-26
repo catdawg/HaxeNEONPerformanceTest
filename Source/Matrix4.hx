@@ -2,7 +2,7 @@
 @:headerCode('	
 #include <hxMath.h>	
 
-#define USE_NEON 0
+#define USE_NEON 1
 
 #ifdef __cplusplus
 extern "C" {
