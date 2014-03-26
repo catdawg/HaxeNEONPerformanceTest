@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Matrix Performance Test" package="com.matrix.tests" version="0.0.1" company="TestingCompanyForMatrices" />
+	<app main="Main" path="Export" file="MatrixPerformanceTest" />
+	
+	<source path="Source" />
+	
+	<haxelib name="lime" />
+	
+	<architecture name="armv7"/>
+	<architecture exclude="armv6"/>
+
+	<window fps="60" />
+	
+</project>
