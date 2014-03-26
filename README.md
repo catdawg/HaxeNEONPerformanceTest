@@ -3,7 +3,12 @@ HaxeNEONPerformanceTest
 
 A simple test of performance with matrix multiplications using the NEON instruction set.
 
-In order for it to work on android you need to change the android toolchain in HXCPP or HXLIBC (whatever you are using). On this part:
+To switch between NEON and not, just go Matrix4.hx and change:
+
+	#define USE_NEON 1
+
+
+In order for it to work on android you need to change the android-toolchain.xml in HXCPP or HXLIBC (whatever you are using). On this part:
 
 	<section if="HXCPP_ARMV7">
 		<flag value="-march=armv7-a"  />
@@ -21,9 +26,10 @@ change to:
 
 
 I found that while there is a noticeable improvement on iOS, on Android it is actually worse. That lead me to this:http://www.crickettechnology.com/blog/?p=691 . 
-The problem seems to be gcc...
+The problem seems to be gcc... Changing to clang might fix this, and android can be compiled with clang.
 
 Results
+=============
 
 iOS iPad Mini Retina - With Neon
 
